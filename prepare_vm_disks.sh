@@ -137,13 +137,13 @@ fi
 
 scan_partition_format()
 {
-    log "Begin scanning and formatting data disks"
+    echo "Begin scanning and formatting data disks"
 
     DISKS=($(scan_for_new_disks))
 
 	if [ "${#DISKS}" -eq 0 ];
 	then
-	    log "No unpartitioned disks without filesystems detected"
+	    echo "No unpartitioned disks without filesystems detected"
 	    return
 	fi
 	echo "Disks are ${DISKS[@]}"
